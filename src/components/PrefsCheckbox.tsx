@@ -1,10 +1,10 @@
 import React, { ChangeEvent } from 'react'
-import { Checked } from '../types/areas.d'
+import { CheckedPrefucture } from '../types/areas.d'
 import LabeledCheckbox from './LabeledCheckbox'
 
 interface Props {
-  value: Array<Checked>
-  handleChange: (e: Checked) => void
+  value: Array<CheckedPrefucture>
+  handleChange: (e: CheckedPrefucture) => void
 }
 
 export default function PrefsCheckBox(props: Props) {

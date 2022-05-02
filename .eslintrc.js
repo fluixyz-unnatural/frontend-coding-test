@@ -28,6 +28,7 @@ module.exports = {
   },
   rules: {
     semi: 'off',
+    'comma-dangle': ['error', 'never'],
     '@typescript-eslint/indent': ['error', 2],
     '@typescript-eslint/prefer-interface': 'off',
     'react/jsx-filename-extension': ['error', { extensions: ['.jsx', '.tsx'] }],
@@ -43,7 +44,6 @@ module.exports = {
         tsx: 'never'
       }
     ],
-    'react/jsx-one-expression-per-line': 'off',
-    'comma-dangle': ['error', 'never']
+    'react/jsx-one-expression-per-line': 'off'
   }
 }

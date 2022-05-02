@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Prefucture } from '../types/areas.d'
-import { AREAS_API_URL } from '../utils/areas'
+import { AREAS_API_URL } from '../utils/config'
 
 export function usePrefuctures() {
   const [prefuctures, setPrefuctures] = useState([] as Array<Prefucture>)

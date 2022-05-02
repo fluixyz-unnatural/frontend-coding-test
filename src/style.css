@@ -1,0 +1,12 @@
+body {
+  background: whitesmoke;
+}
+
+.prefuctures-checkbox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0rem 1rem;
+}
+.prefuctures-checkbox > div {
+    flex-basis: 5.5rem;
+}

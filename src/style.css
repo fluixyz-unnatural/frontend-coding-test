@@ -3,14 +3,17 @@ body {
 }
 
 .header {
-  background: rgb(197, 197, 197);
+  background: rgb(65, 65, 65);
   text-align: center;
-  padding: 1rem;
+  padding: 1.5rem;
   position: sticky;
+  border-bottom: solid rgb(196, 196, 196) 0.125rem;
 }
 
-.header > * {
+.header > h1 {
+  font-size: 1.25rem;
   margin: 0;
+  color: rgb(226, 226, 226);
 }
 
 .container {

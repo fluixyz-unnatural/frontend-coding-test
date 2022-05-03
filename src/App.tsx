@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Header from './components/Header'
 import PrefsCheckBox from './components/PrefsCheckbox'
 import PrefsPopulationChart from './components/PrefsPopulationChart'
 import { usePrefucturePopulation, usePrefuctures } from './hooks/areas'
@@ -10,7 +11,6 @@ function App() {
   const [checked, setChecked] = useState<Array<CheckedPrefucture>>([])
   const [display, setDisplay] = useState<Array<Prefucture>>([])
   const populations = usePrefucturePopulation(display)
-  console.log('population', populations)
   useEffect(() => {
     setChecked(
       prefs.map((e) => ({
@@ -20,31 +20,33 @@ function App() {
     )
   }, [prefs])
   useEffect(() => {
-    console.log(
-      checked.filter((elm) => elm.checked).map((elm) => elm.prefucture.prefName)
-    )
     setDisplay(
       checked.filter((elm) => elm.checked).map((elm) => elm.prefucture)
     )
   }, [checked])
   return (
     <div>
-      <PrefsCheckBox
-        value={checked}
-        handleChange={(e: CheckedPrefucture) => {
-          setChecked(
-            [
-              ...checked.filter(
-                (elm) => elm.prefucture.prefCode !== e.prefucture.prefCode
-              ),
-              e
-            ].sort((a, b) => a.prefucture.prefCode - b.prefucture.prefCode)
-          )
-          return
-        }}
-      />
-      <PrefsPopulationChart populations={populations} />
-      {populations.map((elm) => elm.prefucture.prefName).join(', ')}
+      <Header />
+      <section className={'container'}>
+        <h4>都道府県</h4>
+        <div className={'checkbox-container'}>
+          <PrefsCheckBox
+            value={checked}
+            handleChange={(e: CheckedPrefucture) => {
+              setChecked(
+                [
+                  ...checked.filter(
+                    (elm) => elm.prefucture.prefCode !== e.prefucture.prefCode
+                  ),
+                  e
+                ].sort((a, b) => a.prefucture.prefCode - b.prefucture.prefCode)
+              )
+              return
+            }}
+          />
+        </div>
+        <PrefsPopulationChart populations={populations} />
+      </section>
     </div>
   )
 }

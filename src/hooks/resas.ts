@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from 'react'
-import { Population, Prefucture } from '../types/areas.d'
+import { Population, Prefucture } from '../types/resas.d'
 import { AREAS_API_URL } from '../utils/config'
 
 // 都道府県の一覧

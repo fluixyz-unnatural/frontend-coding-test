@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react'
 import Header from './components/Header'
 import PrefsCheckBox from './components/PrefsCheckbox'
 import PrefsPopulationChart from './components/PrefsPopulationChart'
-import { usePrefucturePopulation, usePrefuctures } from './hooks/areas'
+import { usePrefucturePopulation, usePrefuctures } from './hooks/resas'
 import './style.css'
-import { CheckedPrefucture, Prefucture } from './types/areas.d'
+import { CheckedPrefucture, Prefucture } from './types/resas.d'
 
 function App() {
   const prefs = usePrefuctures()

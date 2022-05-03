@@ -1,7 +1,7 @@
 import Highcharts from 'highcharts'
 import HighchartsReact from 'highcharts-react-official'
 import React from 'react'
-import { PrefsPopulation } from '../types/areas.d'
+import { PrefsPopulation } from '../types/resas.d'
 
 interface Props {
   populations: Array<PrefsPopulation>

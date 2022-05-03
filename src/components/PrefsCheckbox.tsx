@@ -1,5 +1,5 @@
 import React, { ChangeEvent } from 'react'
-import { CheckedPrefucture } from '../types/areas.d'
+import { CheckedPrefucture } from '../types/resas.d'
 import LabeledCheckbox from './LabeledCheckbox'
 
 interface Props {

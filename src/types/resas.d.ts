@@ -8,7 +8,7 @@ export interface CheckedPrefucture {
   checked: boolean
 }
 
-interface Population {
+export interface Population {
   year: number
   value: number
 }

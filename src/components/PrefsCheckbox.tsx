@@ -10,15 +10,15 @@ interface Props {
 export default function PrefsCheckBox(props: Props) {
   return (
     <div className={'prefuctures-checkbox'}>
-      {props.value.map((pref) => (
+      {props.value.map((elm) => (
         <LabeledCheckbox
-          key={pref.prefucture.prefCode}
-          label={pref.prefucture.prefName}
-          value={pref.checked}
+          key={elm.prefucture.prefCode}
+          label={elm.prefucture.prefName}
+          value={elm.checked}
           handleChange={(e: ChangeEvent) => {
             props.handleChange({
-              prefucture: pref.prefucture,
-              checked: !pref.checked
+              prefucture: elm.prefucture,
+              checked: !elm.checked
             })
           }}
         />

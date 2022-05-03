@@ -49,5 +49,5 @@ export function usePrefucturePopulation(prefuctures: Array<Prefucture>) {
       population: data[pref.prefCode] || []
     }
   })
-  return populations.filter((elm) => elm.population.length > 0)
+  return populations
 }

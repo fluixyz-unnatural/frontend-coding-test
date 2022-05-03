@@ -34,8 +34,20 @@ body {
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
-  gap: 0rem 1rem;
+  gap: 0 0;
+  accent-color: rgb(210, 129, 0);
 }
+
+.labeled-checkbox {
+  display: block;
+  width: 5.5rem;
+  padding: 0.25rem;
+  transition: background-color 0.1s ease-out;
+}
+.labeled-checkbox:hover {
+  background: rgb(255, 220, 165, 0.5);
+}
+
 .prefuctures-checkbox > div {
   flex-basis: 5.5rem;
 }

@@ -11,4 +11,6 @@ RESAS APIを叩き都道府県別人口推移を表示するReact製SPA
 
 ### [fluixyz-unnatural/coding-test-api-proxy](https://github.com/fluixyz-unnatural/conding-test-api-proxy)
 
-RESAS-APIのキーを隠蔽したままSPA公開するためのサーバ
+~~RESAS-APIのキーを隠蔽したままSPA公開するためのサーバ~~
+
+[#7](https://github.com/fluixyz-unnatural/frontend-coding-test/pull/7)の仕様変更で不要に

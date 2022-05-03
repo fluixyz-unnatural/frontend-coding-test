@@ -7,6 +7,9 @@ RESAS APIを叩き都道府県別人口推移を表示するReact製SPA
 1. .env.localにREACT_APP_RESAS_API_KEYを設置
 2. npm run start
 
+## 公開先 (Netlify) 
+https://capable-piroshki-dca058.netlify.app/
+
 ## 関連リポジトリ
 
 ### [fluixyz-unnatural/coding-test-api-proxy](https://github.com/fluixyz-unnatural/conding-test-api-proxy)

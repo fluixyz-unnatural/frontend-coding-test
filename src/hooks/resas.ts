@@ -1,12 +1,12 @@
 import { useEffect, useState, useRef } from 'react'
 import { Population, Prefucture } from '../types/resas.d'
-import { AREAS_API_URL } from '../utils/config'
+import { RESAS_API_URL } from '../utils/config'
 
 // 都道府県の一覧
 export function usePrefuctures() {
   const [prefuctures, setPrefuctures] = useState<Array<Prefucture>>([])
   const fetchPrefuctures = async () => {
-    const res = await fetch(AREAS_API_URL + '/api/v1/prefectures')
+    const res = await fetch(RESAS_API_URL + '/api/v1/prefectures')
     const data = await res.json()
     setPrefuctures(data.result)
   }
@@ -34,7 +34,7 @@ export function usePrefucturePopulation(prefuctures: Array<Prefucture>) {
         cityCode: '-'
       } as unknown as Record<string, string>)
       const res = await fetch(
-        AREAS_API_URL + '/api/v1/population/composition/perYear?' + query
+        RESAS_API_URL + '/api/v1/population/composition/perYear?' + query
       )
       const json = await res.json()
       const tmp = { ...dataRef.current }

@@ -41,7 +41,10 @@ export default function PrefsPopulationChart({ populations }: Props) {
 
   return (
     <div>
-      <HighchartsReact highcharts={Highcharts} options={options} />
+      <HighchartsReact
+        highcharts={Highcharts}
+        options={options}
+      />
     </div>
   )
 }

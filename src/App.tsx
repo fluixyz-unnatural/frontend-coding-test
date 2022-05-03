@@ -19,11 +19,6 @@ function App() {
       }))
     )
   }, [prefs])
-  useEffect(() => {
-    setDisplay(
-      checked.filter((elm) => elm.checked).map((elm) => elm.prefucture)
-    )
-  }, [checked])
   return (
     <div>
       <Header />
@@ -41,6 +36,15 @@ function App() {
                   e
                 ].sort((a, b) => a.prefucture.prefCode - b.prefucture.prefCode)
               )
+              if (e.checked) {
+                setDisplay([...display, e.prefucture])
+              } else {
+                setDisplay(
+                  display.filter(
+                    (pref) => pref.prefCode !== e.prefucture.prefCode
+                  )
+                )
+              }
               return
             }}
           />

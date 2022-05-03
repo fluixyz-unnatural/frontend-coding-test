@@ -9,6 +9,7 @@ interface Props {
 export default function PrefsPopulationChart({ populations }: Props) {
   if (populations.length <= 0) return <p>please check prefucture</p>
   const options = {
+    title: { text: '人口推移' },
     series: populations.map((elm) => {
       return {
         name: elm.prefucture.prefName,
@@ -18,9 +19,7 @@ export default function PrefsPopulationChart({ populations }: Props) {
     xAxis: {
       title: {
         text: '年度',
-        align: 'high',
-        x: 50,
-        y: -20
+        align: 'high'
       },
       categories: populations[0].population.map((e) => e.year)
     },
@@ -28,8 +27,7 @@ export default function PrefsPopulationChart({ populations }: Props) {
       title: {
         text: '人口数 (人)',
         align: 'high',
-        rotation: '0',
-        y: -20
+        rotation: '0'
       }
     },
     legend: {
